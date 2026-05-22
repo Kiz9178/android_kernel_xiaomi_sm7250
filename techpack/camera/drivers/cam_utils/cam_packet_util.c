@@ -141,7 +141,6 @@ int cam_packet_util_get_kmd_buffer(struct cam_packet *packet,
 			packet->kmd_cmd_buf_offset, remain_len,
 			cmd_desc->offset, cmd_desc->size, cmd_desc->length);
 		rc = -EINVAL;
-		goto rel_kmd_buf;
 	}
 
 	cpu_addr += (cmd_desc->offset / 4) + (packet->kmd_cmd_buf_offset / 4);
